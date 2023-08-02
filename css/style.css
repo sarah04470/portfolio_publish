@@ -146,9 +146,9 @@ main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list{
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list .display-item{  }
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list .display-item .item{ width: 438px; top: 0; }
 
-main .portfolio .contents .tab-contents .tab-menu{ opacity: 0; box-sizing: border-box; transition: all 0.3s ease-in-out; }
-main .portfolio .contents .tab-contents .tab-menu.on{ opacity: 1; }
-main .portfolio .contents .tab-contents .pager{ width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+main .portfolio .contents .tab-contents .tab-menu{ opacity: 0; box-sizing: border-box; transition: all 0.3s ease-in-out; display: none; }
+main .portfolio .contents .tab-contents .tab-menu.on{ opacity: 1; display: block; }
+main .portfolio .contents .tab-contents .pager{ width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center;  }
 main .portfolio .contents .tab-contents .pager .prev,
 main .portfolio .contents .tab-contents .pager .next{ transition: all 0.3s; }
 main .portfolio .contents .tab-contents .pager .prev:hover, main .portfolio .contents .tab-contents .pager .prev:checked, main .portfolio .contents .tab-contents .pager .prev:focus,

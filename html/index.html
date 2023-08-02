@@ -706,78 +706,56 @@
             });
 
             // 페이지 로드 시 slick 캐러셀 초기화
-            $('.device-slick .device-container').slick({
-                slide: 'li',
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 1500,
-                draggable: true,
-                dots: true,
-                prevArrow: $('.device slick .pager .prev'),
-                nextArrow: $('.device slick .pager .next'),
-                speed: 1500,
-            });
+            $('.device-slick .device-container').on('init', function() {
+                $(this).slick({
+                    slide: 'li',
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    draggable: true,
+                    dots: false,
+                    prevArrow: $('.device slick .pager .prev'),
+                    nextArrow: $('.device slick .pager .next'),
+                    speed: 1500,
+                });
+            }).slick('init');
 
             //  페이지 로드 시 slick 캐러셀 초기화
-            $('.design-slick .display-list').slick({
-                slide: 'li',
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 1500,
-                draggable: true,
-                prevArrow: $('.pager .prev'),
-                nextArrow: $('.pager .next'),
-                speed: 1500,
-            });
+            $('.design-slick .display-list').on('init', function() {
+                $(this).slick({
+                    slide: 'li',
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    draggable: true,
+                    dots: false,
+                    prevArrow: $('.device slick .pager .prev'),
+                    nextArrow: $('.device slick .pager .next'),
+                    speed: 1500,
+                });
+            }).slick('init');
 
             //  페이지 로드 시 slick 캐러셀 초기화
-            $('.dev-slick .display-list').slick({
-                slide: 'li',
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 1500,
-                draggable: true,
-                prevArrow: $('.pager .prev'),
-                nextArrow: $('.pager .next'),
-                speed: 1500,
-            });
+            $('.dev-slick .display-list').on('init', function() {
+                $(this).slick({
+                    slide: 'li',
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    draggable: true,
+                    dots: false,
+                    prevArrow: $('.device slick .pager .prev'),
+                    nextArrow: $('.device slick .pager .next'),
+                    speed: 1500,
+                });
+            }).slick('init');
         });
     </script>
-    
-
-    <!-- <script type="text/javascript">
-        //  imac과 ipad를 하나의 슬라이더 그룹으로 묶기
-        $('.device-slick .device-container').slick({
-            slide: 'li',
-            infinite :true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 1500,
-            draggable: true,
-            dots: true,
-            prevArrow: $('.pager .prev'),
-            nextArrow: $('.pager .next'),
-            speed: 1500
-        });
-    </script> -->
-
-    <!-- <script>
-        $(function(){
-            $('ul.tab-list li').click(function(){
-                var activeTab = $(this).attr('data-tab');
-                $('ul.tab-list li').removeClass('on');
-                $('.tab-menu').removeClass('on');
-                $(this).addClass('on');
-                $('#' + activeTab).addClass('on');
-            })
-        });
-    </script> -->
 </body>
 </html>
