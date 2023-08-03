@@ -50,15 +50,38 @@ header .status-bar nav .gnb .nav-list .nav-item .item{ color: #333; text-decorat
 /* main start */
 main{ padding-top: 50px; }
 
-main .home{ width: 100%; height: calc(100vh - 50px); background-color: #f7f7f7; position: relative; box-sizing: border-box; }
+main .home{ width: 100%; height: calc(100vh - 50px); background-color: #f7f7f7; position: relative; box-sizing: border-box; overflow: hidden; }
 main .home .main-img{ background: url(../img/main-img.png) no-repeat 100% 100%; background-size: cover; width: 100%; height: 100%; padding: 0; margin: 0; position: absolute; }
-main .home .main-bus{ position: absolute; right: 0; top: 0; }
+main .home .main-bus{ position: absolute; right: -300px; top: -230px; animation: slideBus 8s ease-in-out;  }
+/* main .home .main-bus{ position: absolute; right: -300px; top: -250px; animation: slideBus 10s linear infinite; } */
 main .home .main-title{ position: absolute; width: 80%; height: 100%; margin: 0 10%; text-align: right; bottom: calc(0% - 100vh + 30%); }
 main .home .main-title p{ font-size: 3.5rem; font-weight: 900; font-family: 'sf pro', 'Helvetica', sans-serif; line-height: 1.2; }
 /* main .home .main-title{ position: relative; width: 80%; height: 100%; margin: 0 auto; }
 main .home .main-title p{ position: absolute; font-size: 3.5rem; font-weight: 900; font-family: 'sf pro', 'Helvetica', sans-serif; line-height: 1.2; right: 0%; bottom: calc(- 12%); } */
 /* main .home .main-title{ width: 80%; margin: 0 auto; display: flex; justify-content: flex-end; z-index: 1; }
 main .home .main-title p{ font-size: 3.5rem; font-weight: 900; font-family: 'sf pro', 'Helvetica', sans-serif; line-height: 1.2; } */
+
+@keyframes slideBus {
+    0% {
+        right: -300px;
+        top: -230px;
+    }
+
+    25% {
+        right: 600px;
+        top: 300px;
+    }
+
+    50% {
+        right: 360px;
+        top: 160px;
+    }
+
+    100% {
+        right: calc(100% + 10px);
+        top: calc(100%);
+    }
+}
 
 
 main .about{ width: 100%; padding-bottom: 80px; }
