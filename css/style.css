@@ -37,6 +37,10 @@ body{ font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', '
 .title .title-num{ font-size: 11.25rem; opacity: 20%; }
 .title .title-txt{ font-size: 6.25rem; opacity: 10%; }
 
+/* body::-webkit-scrollbar { width: 6px;}
+body::-webkit-scrollbar-thumb { height: 10%; background: #e9be82; border-radius: 4px; }
+body::-webkit-scrollbar-track { background: rgba(233, 190, 130, 0.1); } */
+
 /* keyframe 선언 */
 
 @keyframes slideBus {
@@ -69,7 +73,7 @@ body{ font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', '
 }
 
 
-/* Header start */ㄴ
+/* Header start */
 header{ min-width: 850px; width: 100%; height: 50px; padding: 0 20px; background-color: #f0f0f0; position: fixed; z-index: 2; }
 header .status-bar{ height: 100%; }
 header .status-bar nav{  }
@@ -153,7 +157,7 @@ main .portfolio .contents .tab-nav .tab-list .tab-item{  }
 main .portfolio .contents .tab-nav .tab-list .tab-item a{ color: #aaa; transition: all 0.3s; }
 main .portfolio .contents .tab-nav .tab-list .tab-item.on a{ color: #333; }
 main .portfolio .contents .tab-nav .tab-list .bar{ width: 2px; background-color: #aaa; border-radius: 4px; }
-main .portfolio .contents .tab-contents{ width: 100%; height: 700px; padding-top: 80px; box-sizing: border-box; }
+main .portfolio .contents .tab-contents{ width: 100%; height: 700px; padding-top: 80px; box-sizing: border-box; position: relative; }
 main .portfolio .contents .tab-contents .design-slick{ width: 80%; margin: 0 auto; }
 main .portfolio .contents .tab-contents .design-slick .ipad{ position: relative; }
 main .portfolio .contents .tab-contents .design-slick .ipad .mockup{ position: relative; }
@@ -193,6 +197,15 @@ main .portfolio .contents .tab-contents .pager .prev,
 main .portfolio .contents .tab-contents .pager .next{ transition: all 0.3s; }
 main .portfolio .contents .tab-contents .pager .prev:hover, main .portfolio .contents .tab-contents .pager .prev:checked, main .portfolio .contents .tab-contents .pager .prev:focus,
 main .portfolio .contents .tab-contents .pager .next:hover, main .portfolio .contents .tab-contents .pager .next:checked, main .portfolio .contents .tab-contents .pager .next:focus{ cursor: pointer; text-shadow: 0 10px 18px 0 rgba(0,0,0,0.15); }
+
+main .portfolio .contents .tab-contents .modal{ display: none; width: 100vw; height: 100vh; background-color: rgba(0,0,0, 0.4); z-index: 10; position: fixed; top: 0; bottom: 0; left: 0; right: 0;  }
+main .portfolio .contents .tab-contents .modal .modal-window{ max-width: 1400px; min-width: 1100px; width: 80%; height: 80%; background-color: #0F1128; border-radius: 20px; margin: 0 auto; position: relative; padding-top: 80px; top: 10%; }
+main .portfolio .contents .tab-contents .modal .modal-window .modal-area{ display: flex;  width: 80%; height: 90%; margin: 0 auto; overflow: hidden; border-radius: 8px; }
+main .portfolio .contents .tab-contents .modal .modal-window .modal-area .modal-list{ display: flex; flex-direction: column; gap: 0; justify-content: flex-start; align-items: center; margin: 0 auto; overflow-y:scroll; -ms-overflow-style: none; scrollbar-width: none; }
+main .portfolio .contents .tab-contents .modal .modal-window .modal-area .modal-list .modal-item{  }
+main .portfolio .contents .tab-contents .modal .modal-window .modal-area .modal-list .modal-item .item{ width: 100%; height: auto; }
+main .portfolio .contents .tab-contents .modal .modal-window .close-button{ position: absolute; top: calc(0% + 3%); right: calc(0% + 3%); background-color: transparent; border: none; outline: none; color: #E9BE82; font-size: 3.75rem; cursor: pointer; }
+main .portfolio .contents .tab-contents .modal .modal-window .modal-area .modal-list::-webkit-scrollbar { display: none; }
 
 
 main .contact{ width: 100%; }
