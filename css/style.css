@@ -37,8 +37,39 @@ body{ font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', '
 .title .title-num{ font-size: 11.25rem; opacity: 20%; }
 .title .title-txt{ font-size: 6.25rem; opacity: 10%; }
 
+/* keyframe 선언 */
 
-/* Header start */
+@keyframes slideBus {
+    0% { transform: translate(0,0); /* right: -300px; top: -230px; */ }
+    25% { transform: translate(-1000px, 580px); /* right: 600px; top: 300px; */ }
+    50% { transform: translate(-740px, 430px); /* right: 360px; top: 160px; */ }
+    100% { transform: translate(calc(-100vw - 300px), calc(100vh + 180px)); /* right: calc(100% + 10px); top: calc(100%); */ }
+}
+
+@keyframes shaking {
+    0% { transform: rotate(0deg); }
+    12.5% { transform: rotate(5deg); }
+    25% { transform: rotate(0deg); }
+    37.5% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+    62.5% { transform: rotate(5deg); }
+    75% { transform: rotate(0deg); }
+    87.5% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes filling {
+    0% { transform: scaleX(10%); }
+    100% { transform: scaleX(100%); }
+}
+
+@keyframes tabOpacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+/* Header start */ㄴ
 header{ min-width: 850px; width: 100%; height: 50px; padding: 0 20px; background-color: #f0f0f0; position: fixed; z-index: 2; }
 header .status-bar{ height: 100%; }
 header .status-bar nav{  }
@@ -61,31 +92,7 @@ main .home .main-title p{ position: absolute; font-size: 3.5rem; font-weight: 90
 /* main .home .main-title{ width: 80%; margin: 0 auto; display: flex; justify-content: flex-end; z-index: 1; }
 main .home .main-title p{ font-size: 3.5rem; font-weight: 900; font-family: 'sf pro', 'Helvetica', sans-serif; line-height: 1.2; } */
 
-@keyframes slideBus {
-    0% {
-        transform: translate(0,0);
-        /* right: -300px;
-        top: -230px; */
-    }
 
-    25% {
-        transform: translate(-1000px, 580px);
-        /* right: 600px;
-        top: 300px; */
-    }
-
-    50% {
-        transform: translate(-740px, 430px);
-        /* right: 360px;
-        top: 160px; */
-    }
-
-    100% {
-        transform: translate(calc(-100vw - 300px), calc(100vh + 180px));
-        /* right: calc(100% + 10px);
-        top: calc(100%); */
-    }
-}
 
 
 main .about{ width: 100%; padding-bottom: 80px; }
@@ -115,13 +122,14 @@ main .skills .contents .skills-list .status-bar{ height: 40px; border-radius: 20
 main .skills .contents .skills-list .status-bar .status-nav{ font-size: 0.750rem; font-weight: 700; }
 main .skills .contents .skills-list .tools-list{ width: 80%; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; padding: 33px 0; }
 main .skills .contents .skills-list .tools-list .tools-item{ display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+main .skills .contents .skills-list .tools-list .tools-item:hover .item-img{ animation: shaking 0.5s; }
 main .skills .contents .skills-list .tools-list .tools-item .item-img{ width: 46px; height: 46px; display: flex; justify-content: center; align-items: center; }
 main .skills .contents .skills-list .tools-list .tools-item .item-img img{ width: 46px; max-width: 46px; max-height: 46px; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar{ display: flex; flex-direction: column; width: 60%; gap: 8px; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-name{ font-size: 0.750rem; font-weight: 700; }
-main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per{ width: 100%; height: 10px; background-color: #BCDDFF; border-radius: 5px; }
+main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per{ width: 100%; height: 10px; background-color: #BCDDFF; border-radius: 5px; overflow: hidden; }
 /* main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-back{  } */
-main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front{ height: 100%; background-color: #6FB7FF; border-radius: 5px; }
+main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front{ height: 100%; background-color: #6FB7FF; border-radius: 5px; transform-origin: 0 0; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per100{ width: 100%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per90{ width: 90%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per80{ width: 80%; }
@@ -130,6 +138,10 @@ main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per50{ width: 50%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per40{ width: 40%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-per{ font-size: 1rem; font-weight: 900; }
+main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per100, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per90,
+main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per80, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per70,
+main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per60, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per50,
+main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per40 { animation: filling 1s ease-out; }
 
 
 main .portfolio{ width: 100%; min-height: 1100px; padding-bottom: 80px; }
@@ -175,7 +187,7 @@ main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list 
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list .display-item .item{ width: 438px; top: 0; }
 
 main .portfolio .contents .tab-contents .tab-menu{ opacity: 0; box-sizing: border-box; transition: all 0.3s ease-in-out; display: none; }
-main .portfolio .contents .tab-contents .tab-menu.on{ opacity: 1; display: block; }
+main .portfolio .contents .tab-contents .tab-menu.on{ opacity: 1; display: block; animation: tabOpacity 0.5s ease-in; }
 main .portfolio .contents .tab-contents .pager{ width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center;  }
 main .portfolio .contents .tab-contents .pager .prev,
 main .portfolio .contents .tab-contents .pager .next{ transition: all 0.3s; }
