@@ -7,24 +7,69 @@
 }
 
 @font-face {
-    font-family: '';
+    font-family: 'SF Pro';
     /* sf pro */
-    src: url();
-    font-weight: 700;
+    src: url(../webfont/SF-Pro.eot);
+    src: url(../webfont/SF-Pro.otf),
+         url(../webfont/SF-Pro.ttf),
+         url(../webfont/SF-Pro.woff),
+         url(../webfont/SF-Pro.woff2);
+    font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: '';
-    /* sf pro */
-    src: url();
+    font-family: 'SF Pro Text';
+    /* sf pro text */
+    /* src: url(../webfont/SF-Pro-Text-Medium.otf); */
+    src: url(../webfont/SF-Pro-Text-Medium.otf),
+         url(../webfont/SF-Pro-Text-Medium.ttf)
+         /* url(../webfont/SF-Pro-Text-Medium.woff),
+         url(../webfont/SF-Pro-Text-Medium.woff2) */
+         ;
+    font-weight: 500;
+    font-style: medium;
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    /* sf pro text */
+    /* src: url(../webfont/SF-Pro-Text-Bold.otf); */
+    src: url(../webfont/SF-Pro-Text-Bold.otf),
+         url(../webfont/SF-Pro-Text-Bold.ttf)
+         /* url(../webfont/SF-Pro-Text-Bold.woff),
+         url(../webfont/SF-Pro-Text-Bold.woff2) */
+         ;
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    /* sf pro text */
+    /* src: url(../webfont/SF-Pro-Text-Heavy.otf); */
+    src: url(../webfont/SF-Pro-Text-Heavy.otf),
+         url(../webfont/SF-Pro-Text-Heavy.ttf)
+         /* url(../webfont/SF-Pro-Text-Heavy.woff),
+         url(../webfont/SF-Pro-Text-Heavy.woff2) */
+         ;
+    font-weight: 800;
+    font-style: heavy;
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    /* sf pro text */
+    /* src: url(../webfont/SF-Pro-Text-Black.otf); */
+    src: url(../webfont/SF-Pro-Text-Black.otf),
+         url(../webfont/SF-Pro-Text-Black.ttf)
+         /* url(../webfont/SF-Pro-Text-Black.woff),
+         url(../webfont/SF-Pro-Text-Black.woff2) */
+         ;
     font-weight: 900;
-    font-style: normal;
+    font-style: black;
 }
 
 /* 전체 폰트 선언 */
 html{ font-size: 16px; }
-*{ box-sizing: border-box; font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', 'Helvetica', Sans-serif; text-decoration: none; }
-body{ font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', 'Helvetica', Sans-serif; z-index: 0; }
+*{ box-sizing: border-box; font-family: 'SF Pro Text', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', 'Helvetica', Sans-serif; text-decoration: none; }
+body{ font-family: 'SF Pro Text', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', 'Helvetica', Sans-serif; z-index: 0; }
 
 /* 공통 디자인 선언 */
 .ellipse{ display: flex; gap: 10px; flex-direction: row; }
@@ -33,7 +78,7 @@ body{ font-family: 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, 'Arial', '
 .ellipse .el-2nd{ background-color: #F5BE4F; }
 .ellipse .el-3rd{ background-color: #61C454; }
 .status-bar{ background-color: #F0F0F0; padding: 0 20px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
-.title{ font-family: 'sf pro', 'Helvetica', sans-serif; font-weight: 900; display: flex; flex-direction: row; gap: 30px; align-items: center; color: 000; position: relative; left: -75px; }
+.title{ font-family: 'SF Pro Text', 'Helvetica', sans-serif; font-weight: 900; display: flex; flex-direction: row; gap: 30px; align-items: center; color: 000; position: relative; left: -75px; }
 .title .title-num{ font-size: 11.25rem; opacity: 20%; }
 .title .title-txt{ font-size: 6.25rem; opacity: 10%; }
 
@@ -80,7 +125,7 @@ header .status-bar nav{  }
 header .status-bar nav .gnb{  }
 header .status-bar nav .gnb .nav-list{ display: flex; flex-direction: row; gap: 50px; align-items: center; }
 header .status-bar nav .gnb .nav-list .nav-item{  }
-header .status-bar nav .gnb .nav-list .nav-item .item{ color: #333; text-decoration: none; font-weight: 800; font-family: 'sf pro', 'Helvetica', sans-serif; }
+header .status-bar nav .gnb .nav-list .nav-item .item{ color: #333; text-decoration: none; font-weight: 800; font-family: 'SF Pro Text', 'Helvetica', sans-serif; }
 
 /* main start */
 main{ padding-top: 50px; }
@@ -101,7 +146,7 @@ main .home .main-title p{ font-size: 3.5rem; font-weight: 900; font-family: 'sf 
 
 main .about{ width: 100%; padding-bottom: 80px; }
 main .about .title{ padding-top: 60px; }
-main .about .contents{ width: 100%; display: flex; margin: 0 auto; justify-content: center; align-items: center; gap: 60px;  }
+main .about .contents{ width: 100%; display: flex; margin: 0 auto; justify-content: center; align-items: center; gap: 60px; }
 main .about .contents .about-me{  }
 main .about .contents .about-me .img{ background: url(../img/memoji_01.png) no-repeat; background-size: 240px 240px; width: 240px; height: 240px; background-color: #fff; }
 main .about .contents .about-me .name{ font-size: 2rem; font-weight: 900; margin-top: 40px; text-align: center; }
@@ -123,8 +168,8 @@ main .skills .contents .skills-list .skills-design, main .skills .contents .skil
 /* main .skills .contents .skills-list .skills-dev{  }
 main .skills .contents .skills-list .skills-ing{  } */
 main .skills .contents .skills-list .status-bar{ height: 40px; border-radius: 20px 20px 0 0; }
-main .skills .contents .skills-list .status-bar .status-nav{ font-size: 0.750rem; font-weight: 700; }
-main .skills .contents .skills-list .tools-list{ width: 80%; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; padding: 33px 0; }
+main .skills .contents .skills-list .status-bar .status-nav{ font-size: 0.750rem; font-weight: 700; cursor: default; }
+main .skills .contents .skills-list .tools-list{ width: 80%; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; padding: 33px 0; cursor: default; }
 main .skills .contents .skills-list .tools-list .tools-item{ display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 main .skills .contents .skills-list .tools-list .tools-item:hover .item-img{ animation: shaking 0.5s; }
 main .skills .contents .skills-list .tools-list .tools-item .item-img{ width: 46px; height: 46px; display: flex; justify-content: center; align-items: center; }
@@ -141,7 +186,7 @@ main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per60{ width: 60%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per50{ width: 50%; }
 main .skills .contents .skills-list .tools-list .tools-item .item-bar .bar-per .bar-front.per40{ width: 40%; }
-main .skills .contents .skills-list .tools-list .tools-item .item-per{ font-size: 1rem; font-weight: 900; }
+main .skills .contents .skills-list .tools-list .tools-item .item-per{ font-size: 1rem; font-weight: 700; }
 main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per100, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per90,
 main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per80, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per70,
 main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per60, main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar-per .bar-front.per50,
@@ -151,8 +196,8 @@ main .skills .contents .skills-list .tools-list .tools-item:hover .item-bar .bar
 main .portfolio{ width: 100%; min-height: 1100px; padding-bottom: 80px; }
 main .portfolio .title{ padding-top: 60px; }
 main .portfolio .contents{ width: 100%; }
-main .portfolio .contents .tab-nav{ position: relative; }
-main .portfolio .contents .tab-nav .tab-list{ display: flex; flex-direction: row; gap: 30px; position: absolute; right: calc(0% + 5%); font-size: 1rem; font-weight: 900; }
+main .portfolio .contents .tab-nav{ position: relative; z-index: 1; }
+main .portfolio .contents .tab-nav .tab-list{ display: flex; flex-direction: row; gap: 30px; position: absolute; right: calc(0% + 5%); font-size: 1rem; font-weight: 800; }
 main .portfolio .contents .tab-nav .tab-list .tab-item{  }
 main .portfolio .contents .tab-nav .tab-list .tab-item a{ color: #aaa; transition: all 0.3s; }
 main .portfolio .contents .tab-nav .tab-list .tab-item.on a{ color: #333; }
@@ -198,7 +243,7 @@ main .portfolio .contents .tab-contents .pager .next{ transition: all 0.3s; }
 main .portfolio .contents .tab-contents .pager .prev:hover, main .portfolio .contents .tab-contents .pager .prev:checked, main .portfolio .contents .tab-contents .pager .prev:focus,
 main .portfolio .contents .tab-contents .pager .next:hover, main .portfolio .contents .tab-contents .pager .next:checked, main .portfolio .contents .tab-contents .pager .next:focus{ cursor: pointer; text-shadow: 0 10px 18px 0 rgba(0,0,0,0.15); }
 
-main .portfolio .contents .tab-contents .modal{ display: none; width: 100vw; height: 100vh; background-color: rgba(0,0,0, 0.4); z-index: 10; position: fixed; top: 0; bottom: 0; left: 0; right: 0;  }
+main .portfolio .contents .tab-contents .modal{ display: none; width: 100vw; height: 100vh; background-color: rgba(0,0,0, 0.4); z-index: 10; position: fixed; top: 0; bottom: 0; left: 0; right: 0; opacity: 0; animation: tabOpacity 0.5s ease-in; }
 main .portfolio .contents .tab-contents .modal .modal-window{ max-width: 1400px; min-width: 1100px; width: 80%; height: 80%; background-color: #0F1128; border-radius: 20px; margin: 0 auto; position: relative; padding-top: 80px; top: 10%; }
 main .portfolio .contents .tab-contents .modal .modal-window .modal-area{ display: flex;  width: 80%; height: 90%; margin: 0 auto; overflow: hidden; border-radius: 8px; }
 main .portfolio .contents .tab-contents .modal .modal-window .modal-area .modal-list{ display: flex; flex-direction: column; gap: 0; justify-content: flex-start; align-items: center; margin: 0 auto; overflow-y:scroll; -ms-overflow-style: none; scrollbar-width: none; }
@@ -236,4 +281,4 @@ main .contact .contents .contact-inTouch .contact-main .email-form .form-area .f
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-msg{  }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-msg .umsg{ width: 100%; max-width: 540px; min-width: 320px; height: 400px;  }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn{ outline: none; border: none; border-radius: 12px; background-color: #f4f4f4; width: 30%; max-width: 175px; min-width: 130px; height: 52px; font-size: 1.25rem; font-weight: 700; color: rgba(0,0,0, 0.2); transition: all 0.3s; }
-main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn:hover{ background-color: #f4f4f4; color: rgba(0,0,0, 0.4); }
+main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn:hover{ background-color: #e5eaf3; color: rgba(100, 117, 159, 0.7); animation: shaking 0.3s; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); }
