@@ -1,0 +1,23 @@
+* 오류
+
+1. slick
+
+    - 현재 slick 을 쓰고 있는 부분은 section(.portfolio) 입니다.
+      Graphic deisgn 과 Publishing, 총 2개의 탭 메뉴로 구성이 되어있고,
+      그 안에 아이맥이나 아이패드, 아이폰 목업을 띄워 디스플레이 화면이 slick 으로 돌아가는 방식으로 구현을 해두었습니다
+
+      여기서 문제점은, arrow 버튼을 눌렀을 때, 2가지 탭 모두 한 가지 디스플레이만 이벤트가 작용이 된다는 것입니다.
+      그래서 일단 autoplay로 돌려놓았고, 버튼의 위치도 동작 구현이 먼저라 생각해서 아직 수정하지 않은 채로 놔뒀습니다.
+
+      원하는 동작 : prev / next  버튼을 눌렀을 때 화면에 보이는 디스플레이(2개)가 동시구현되는 것.
+
+2. email contact
+
+    - email 관련 오류는 맨 마지막인 section(.contact) 입니다.
+      html 내에서 백엔드를 건들지 않고 로그를 남길 수 있는 방법을 서치하였더니 google apps mail 이 나왔습니다.
+      https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server#how  이 사이트를 참고하여 연결해두었습니다.
+
+      문제점은, 사용자의 이름과 메일, 간단한 메세지를 남겼을 때 forbidden 403 error 가 뜹니다.
+      구글 시트에 로그도 남지 않고, 오류가 뜨며, 전송 성공시에는 성공 메세지가, 실패시에는 실패 메세지가 뜨도록 alert창을 띄워봤더니 실패 메세지가 떠있습니다.
+
+      이 부분은 추가로 필요하신 자료나 정보가 있으시다면 바로 전달드리겠습니다.
