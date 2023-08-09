@@ -442,8 +442,8 @@ main .contact .contents .contact-inTouch .contact-main .email-form .form-area .s
     main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-email .uemail{ height: 48px; }
     main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-msg{  }
     main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-msg .umsg{ width: 100%; max-width: 540px; min-width: 320px; height: 50%; max-height: 380px; min-height: 200px; }
-    main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn{ outline: none; border: none; border-radius: 12px; background-color: #f4f4f4; width: 30%; max-width: 175px; min-width: 130px; height: 48px; font-size: 1rem; font-weight: 700; color: rgba(0,0,0, 0.2); transition: all 0.3s; }
-    main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn:hover{ background-color: #e5eaf3; color: rgba(100, 117, 159, 0.7); animation: shaking 0.3s; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); }
+    main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn{ width: 30%; max-width: 175px; min-width: 130px; height: 48px; font-size: 1rem; }
+    main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn:hover{  }
 
 
 }
