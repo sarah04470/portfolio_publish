@@ -1,7 +1,7 @@
 [build]
   base = "public"
   publish = "public/public/portfolio"
-  command = "echo 'No build script needed'"
+  command = "npm run build"
 
 [[redirects]]
 from = "/*"
