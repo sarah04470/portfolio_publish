@@ -210,7 +210,7 @@ main .portfolio .contents .tab-contents .design-slick .ipad .mockup img{ positio
 main .portfolio .contents .tab-contents .design-slick .ipad .display{ width: 746px; height: 559px; overflow: hidden; position: absolute; right: calc(30% - 26px); bottom: calc(0% + 27px); border-radius: 10px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
 main .portfolio .contents .tab-contents .design-slick .ipad .display .display-list{ display: flex; flex-direction: row; gap: 0; }
 main .portfolio .contents .tab-contents .design-slick .ipad .display .display-list .display-item{  }
-main .portfolio .contents .tab-contents .design-slick .ipad .display .display-list .display-item .item{ width: 746px; height: 559px; }
+main .portfolio .contents .tab-contents .design-slick .ipad .display .display-list .display-item .item{ width: 746px; height: 559px; outline: none; }
 main .portfolio .contents .tab-contents .design-slick .iphone{ position: relative; }
 main .portfolio .contents .tab-contents .design-slick .iphone .mockup{ position: relative; }
 main .portfolio .contents .tab-contents .design-slick .iphone .mockup img{ position: absolute; bottom: calc(0%); left: 66%; }
@@ -234,10 +234,12 @@ main .portfolio .contents .tab-contents .dev-slick .ipad .display{ width: 438px;
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list{ display: flex; flex-direction: row; gap: 0; }
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list .display-item{  }
 main .portfolio .contents .tab-contents .dev-slick .ipad .display .display-list .display-item .item{ width: 438px; top: 0; }
+main .portfolio .contents .tab-contents .display-list:focus, main .portfolio .contents .tab-contents .display-list:active, main .portfolio .contents .tab-contents .display-list:checked{ outline: none; }
 
 main .portfolio .contents .tab-contents .tab-menu{ opacity: 0; box-sizing: border-box; transition: all 0.3s ease-in-out; display: none; }
 main .portfolio .contents .tab-contents .tab-menu.on{ opacity: 1; display: block; animation: tabOpacity 0.5s ease-in; }
-main .portfolio .contents .tab-contents .pager{ width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center;  }
+main .portfolio .contents .tab-contents .pager{ width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+main .portfolio .contents .tab-contents .pager .prev-wrap, main .portfolio .contents .tab-contents .pager .next-wrap{ z-index: 1; }
 main .portfolio .contents .tab-contents .pager .prev,
 main .portfolio .contents .tab-contents .pager .next{ transition: all 0.3s; }
 main .portfolio .contents .tab-contents .pager .prev:hover, main .portfolio .contents .tab-contents .pager .prev:checked, main .portfolio .contents .tab-contents .pager .prev:focus,
@@ -260,12 +262,23 @@ main .contact .contents .contact-talk{ width: 40%; max-width: 640px; min-width: 
 main .contact .contents .contact-talk .status-bar{ height: 40px; border-radius: 20px 20px 0 0; }
 main .contact .contents .contact-talk .contact-main{ display: flex; flex-direction: column; gap: 70px; padding: 52px 0; }
 main .contact .contents .contact-talk .contact-main .title-mid{ font-size: 3.75rem; font-weight: 900; color: rgba(0,0,0, 0.25); padding: 0 70px; }
-main .contact .contents .contact-talk .contact-main .talk-info{  }
+
+main .contact .contents .contact-talk .contact-main .talk-info{ display: flex; flex-direction: column; gap: 40px; width: 80%; margin: 0 auto; cursor: default; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-title{ font-size: 1rem; font-weight: 700; color: #333; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-style{ display: flex; flex-direction: column; gap: 30px; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-style .style-list{ display: flex; flex-direction: column; gap: 10px; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-style .style-list .style-item{ font-size: 12px; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-line{ width: 100%; height: 1.8px; background-color: #ccc; border-radius: 2px; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword{ display: flex; flex-direction: column; gap: 30px; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list{ display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list .keyword-item{ padding: 5px 8px; font-size: 12px; font-weight: 500; color: #333; border: 1.2px solid #226eba; border-radius: 40px; transition: all 0.3s; }
+main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list .keyword-item:hover{ background-color: #11589e; color: #fff; font-weight: 700; animation: shaking 0.3s; box-shadow: 0 2.5px 4.5px 0 rgba(0,0,0,0.2); }
+
 main .contact .contents .contact-inTouch{ width: 50%; max-width: 740px; min-width: 540px; height: 920px; box-sizing: border-box; box-shadow: 0 10px 18px 0 rgba(0,0,0,0.15); border-radius: 20px; background-color: #fff; margin: 0 auto; z-index: 0; position: absolute; left: calc(50% - 80px); }
 main .contact .contents .contact-inTouch .status-bar{  height: 40px; border-radius: 20px 20px 0 0; }
 main .contact .contents .contact-inTouch .contact-main{ display: flex; flex-direction: column; gap: 70px; padding: 52px 0; }
 main .contact .contents .contact-inTouch .contact-main .title-mid{ font-size: 3.75rem; font-weight: 900; color: rgba(0,0,0, 0.25); padding: 0 70px; }
-main .contact .contents .contact-inTouch .contact-main .email-form{ width: 80%; height: 100%; margin: 0 auto; }
+main .contact .contents .contact-inTouch .contact-main .email-form{ width: 80%; height: 100%; margin: 0 auto; position: relative; }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area{ width: 100%; display: flex; flex-direction: column; align-items: flex-end; gap: 30px; }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list{ width: 92%; display: flex; flex-direction: column; gap: 30px; }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item{  }
@@ -282,6 +295,10 @@ main .contact .contents .contact-inTouch .contact-main .email-form .form-area .f
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .form-list .form-item .item-msg .umsg{ width: 100%; max-width: 540px; min-width: 320px; height: 400px;  }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn{ outline: none; border: none; border-radius: 12px; background-color: #f4f4f4; width: 30%; max-width: 175px; min-width: 130px; height: 52px; font-size: 1.25rem; font-weight: 700; color: rgba(0,0,0, 0.2); transition: all 0.3s; }
 main .contact .contents .contact-inTouch .contact-main .email-form .form-area .sendBtn:hover{ background-color: #e5eaf3; color: rgba(100, 117, 159, 0.7); animation: shaking 0.3s; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); }
+main .contact .contents .contact-inTouch .contact-main .email-form .loading-modal{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 5; }
+main .contact .contents .contact-inTouch .contact-main .email-form .loading-modal .modal-content{ display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; background-color: #fff; padding: 20px; border-radius: 10px; text-align: center; }
+main .contact .contents .contact-inTouch .contact-main .email-form .loading-modal .modal-content p{ font-size: 12px; font-weight: 500; padding-left: 3px; }
+main .contact .contents .contact-inTouch .contact-main .email-form .loading-modal .modal-content .xi-spin{ color: #084785; }
 
 
 /**************************
@@ -418,11 +435,20 @@ main .contact .contents .contact-inTouch .contact-main .email-form .form-area .s
     main .contact{ width: 100vw; height: calc(100vh - 50px); }
     main .contact .title{ padding-top: 30px; }
     main .contact .contents{ display: block; position: relative; min-height: 800px; }
-    main .contact .contents .contact-talk{ width: 40%; max-width: 640px; min-width: 420px; height: 60%; max-height: 640px; }
+    main .contact .contents .contact-talk{ width: 40%; max-width: 640px; min-width: 420px; height: 70%; max-height: 640px; }
     main .contact .contents .contact-talk .status-bar{ height: 40px; border-radius: 20px 20px 0 0; }
     main .contact .contents .contact-talk .contact-main{ gap: 50px; }
     main .contact .contents .contact-talk .contact-main .title-mid{ font-size: 3.125rem; padding: 0 50px; }
-    main .contact .contents .contact-talk .contact-main .talk-info{  }
+    main .contact .contents .contact-talk .contact-main .talk-info{ gap: 25px; }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-title{  }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-style{ gap: 20px; }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-style .style-list{ gap: 10px; }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-style .style-list .style-item{  }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-line{  }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword{ gap: 20px; }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list{  }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list .keyword-item{  }
+    main .contact .contents .contact-talk .contact-main .talk-info .talk-keyword .keyword-list .keyword-item:hover{  }
     main .contact .contents .contact-inTouch{ height: 90%; max-height: 920px; }
     main .contact .contents .contact-inTouch .status-bar{  }
     main .contact .contents .contact-inTouch .contact-main{ gap: 50px; }
