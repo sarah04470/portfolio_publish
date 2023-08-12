@@ -3,7 +3,6 @@
   publish = "public/portfolio"
   command = "echo 'No build script needed'"
 
-
 [[redirects]]
 from = "/*"
 to = "/portfolio/index.html"
