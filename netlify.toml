@@ -1,6 +1,6 @@
 [build]
-  base = "04_portfolio/public"
-  publish = "portfolio/public/public/portfolio"
+  base = "public"
+  publish = "portfolio/public"
   command = "echo 'No build script needed'"
 
 [[redirects]]
