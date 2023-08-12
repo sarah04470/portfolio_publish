@@ -1,10 +1,10 @@
 [build]
   base = "public"
-  publish = "portfolio"
+  publish = "public/portfolio"
   command = "echo 'No build script needed'"
 
 
 [[redirects]]
 from = "/*"
-to = "index.html"
+to = "/portfolio/index.html"
 status = 200
