@@ -5,6 +5,6 @@
   "repository": "https://github.com/sarah04470/portfolio.git",
   "license": "MIT",
   "scripts": {
-    "build": "cp public/index.html dist/ && cp css/style.css dist/"
+    "build": "mkdir -p dist && cp public/index.html dist/ && cp css/style.css dist/"
   }
 }
