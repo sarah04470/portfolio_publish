@@ -1,5 +1,5 @@
 [build]
-  base = "portfolio/public"
+  base = "portfolio"
   publish = "portfolio/public/public/portfolio"
   command = "echo 'No build script needed'"
 
